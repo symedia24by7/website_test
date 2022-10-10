@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'dashboard',
     'payments',
     'projects',
-    'store'
+    'store',
+    'user_auth'
 ]
 
 MIDDLEWARE = [
