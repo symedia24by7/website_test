@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from django.http import HttpResponse
 
 # Create your views here.
 
@@ -23,7 +22,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('/')
+            return redirect('dashboard')
         else:
             messages.info(request, 'Invalid Credentials!')
             return redirect('login')
